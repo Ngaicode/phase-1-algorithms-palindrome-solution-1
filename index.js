@@ -1,7 +1,16 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+"use strict";
+const isPalindrome = function (word) {
+  // start from the beginning
+  for (let i = 0; i < word.length / 2; i++) {
+    // check each letter to the correponding letter from the end
+    const checker = word.length - 1 - i;
+    //  return false if the words do not match
+    if (word[i] !== word[checker]) return false;
+  }
 
+  // return true
+  return true;
+};
 /* 
   Add your pseudocode here
 */
